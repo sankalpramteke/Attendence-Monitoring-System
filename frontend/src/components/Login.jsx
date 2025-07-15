@@ -20,7 +20,7 @@ import {
   Lock,
   School
 } from '@mui/icons-material';
-import { useAuth } from '../services/authService';
+import { useAuth } from '../services/authService.jsx';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -32,7 +32,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   
-  const { login } = useAuth();
+  const { login, demoLogin } = useAuth();
   const navigate = useNavigate();
   const theme = useTheme();
 
@@ -80,23 +80,11 @@ const Login = () => {
   };
 
   const handleDemoLogin = async (demoType) => {
-    const demoCredentials = {
-      admin: { email: 'admin@college.edu', password: 'admin123' },
-      faculty: { email: 'faculty@college.edu', password: 'faculty123' },
-      hod: { email: 'hod@college.edu', password: 'hod123' }
-    };
-
-    setFormData(demoCredentials[demoType]);
-    setError('');
-    
-    try {
-      setLoading(true);
-      await login(demoCredentials[demoType].email, demoCredentials[demoType].password);
+    const result = await demoLogin(demoType);
+    if (result.success) {
       navigate('/dashboard');
-    } catch (error) {
-      setError(error.message || 'Demo login failed');
-    } finally {
-      setLoading(false);
+    } else {
+      setError(result.error || 'Demo login failed');
     }
   };
 
@@ -219,42 +207,35 @@ const Login = () => {
           </Button>
         </Box>
 
-        {/* Demo Login Section */}
-        <Divider sx={{ my: 2 }}>
-          <Typography variant="body2" color="text.secondary">
-            Demo Accounts
-          </Typography>
-        </Divider>
-
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          <Button
-            variant="outlined"
-            size="small"
-            onClick={() => handleDemoLogin('admin')}
-            disabled={loading}
-            sx={{ justifyContent: 'flex-start' }}
-          >
-            Admin Demo
-          </Button>
-          <Button
-            variant="outlined"
-            size="small"
-            onClick={() => handleDemoLogin('faculty')}
-            disabled={loading}
-            sx={{ justifyContent: 'flex-start' }}
-          >
-            Faculty Demo
-          </Button>
-          <Button
-            variant="outlined"
-            size="small"
-            onClick={() => handleDemoLogin('hod')}
-            disabled={loading}
-            sx={{ justifyContent: 'flex-start' }}
-          >
-            HOD Demo
-          </Button>
-        </Box>
+        {/* Demo Accounts */}
+        <Divider sx={{ my: 3 }}>Demo Accounts</Divider>
+        <Button
+          fullWidth
+          variant="outlined"
+          color="primary"
+          sx={{ mb: 1, textTransform: 'none' }}
+          onClick={() => handleDemoLogin('admin')}
+        >
+          Admin Demo
+        </Button>
+        <Button
+          fullWidth
+          variant="outlined"
+          color="primary"
+          sx={{ mb: 1, textTransform: 'none' }}
+          onClick={() => handleDemoLogin('faculty')}
+        >
+          Faculty Demo
+        </Button>
+        <Button
+          fullWidth
+          variant="outlined"
+          color="primary"
+          sx={{ mb: 1, textTransform: 'none' }}
+          onClick={() => handleDemoLogin('hod')}
+        >
+          HOD Demo
+        </Button>
 
         {/* Footer Links */}
         <Box sx={{ mt: 3, textAlign: 'center' }}>

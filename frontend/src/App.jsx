@@ -14,7 +14,7 @@ import Register from './components/Register';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import About from './pages/About';
-import { AuthProvider, useAuth } from './services/authService';
+import { AuthProvider, useAuth } from './services/authService.jsx';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {

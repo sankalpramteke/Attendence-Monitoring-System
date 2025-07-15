@@ -32,7 +32,7 @@ import {
   CameraAlt,
   CheckCircle
 } from '@mui/icons-material';
-import { useAuth } from '../services/authService';
+import { useAuth } from '../services/authService.jsx';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material';
 
