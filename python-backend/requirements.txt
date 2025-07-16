@@ -1,0 +1,8 @@
+opencv-python
+ultralytics
+insightface
+numpy
+fastapi
+uvicorn
+python-multipart
+requests

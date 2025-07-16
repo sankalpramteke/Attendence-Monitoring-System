@@ -1,3 +1,29 @@
+# Attendance Monitoring System
+
+## Python Backend Camera Module (Registration)
+
+This project now includes a Python backend module for faculty registration using face recognition. The backend:
+- Captures live frames from the webcam
+- Uses YOLOv8 for face detection
+- Uses ArcFace (InsightFace) for face embedding
+- Saves cropped face images and embeddings (locally or to Supabase)
+
+### Backend Directory Structure
+```
+python-backend/
+│
+├── main.py                   # Entry point (FastAPI server)
+├── camera/                   # Camera & OpenCV related
+│   └── capture_faces.py
+├── models/                   # YOLOv8 and ArcFace loading
+│   ├── detector.py           # YOLOv8 face detection
+│   └── recognizer.py         # ArcFace embedding
+├── utils/
+│   └── supabase_client.py    # For uploading to Supabase (optional)
+├── requirements.txt
+└── config.py                 # Config for paths, thresholds
+```
+
 # Faculty Attendance Monitoring System
 
 A comprehensive AI-powered attendance monitoring system designed specifically for college faculty management. This system combines advanced facial recognition technology with real-time analytics to streamline faculty attendance tracking and reporting.
