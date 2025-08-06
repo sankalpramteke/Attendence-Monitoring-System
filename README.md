@@ -58,8 +58,12 @@ This system is built for modern educational institutions that need an efficient,
 - **Multi-face Detection**: Handle multiple faculty members simultaneously
 
 ### Data Management
+<<<<<<< HEAD
 
 - **Mock Data System**: Comprehensive mock data for demonstration
+=======
+- **Supabase Integration**: Real-time data with PostgreSQL database
+>>>>>>> 5159f2db (frontend integarted)
 - **Real-time Analytics**: Live data processing and visualization
 - **Export Capabilities**: CSV export for external analysis
 
