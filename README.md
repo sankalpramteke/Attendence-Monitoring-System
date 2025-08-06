@@ -3,12 +3,14 @@
 ## Python Backend Camera Module (Registration)
 
 This project now includes a Python backend module for faculty registration using face recognition. The backend:
+
 - Captures live frames from the webcam
 - Uses YOLOv8 for face detection
 - Uses ArcFace (InsightFace) for face embedding
 - Saves cropped face images and embeddings (locally or to Supabase)
 
-### Backend Directory Structure
+### Backend Directory Structures
+
 ```
 python-backend/
 │
@@ -44,16 +46,19 @@ This system is built for modern educational institutions that need an efficient,
 ## 🏗️ System Architecture
 
 ### Frontend
+
 - **React.js**: Modern frontend framework for responsive UI
 - **Material-UI**: Professional design system and components
 - **Real-time Updates**: Live data synchronization across components
 
 ### AI Engine
+
 - **Face Recognition**: Advanced facial recognition algorithms
 - **Deep Learning**: Machine learning models for accurate identification
 - **Multi-face Detection**: Handle multiple faculty members simultaneously
 
 ### Data Management
+
 - **Mock Data System**: Comprehensive mock data for demonstration
 - **Real-time Analytics**: Live data processing and visualization
 - **Export Capabilities**: CSV export for external analysis
@@ -61,6 +66,7 @@ This system is built for modern educational institutions that need an efficient,
 ## 📊 Features
 
 ### Dashboard
+
 - Real-time attendance overview
 - Department performance analytics
 - System status monitoring
@@ -68,6 +74,7 @@ This system is built for modern educational institutions that need an efficient,
 - Live statistics and trends
 
 ### Faculty Registration
+
 - Multi-step registration process
 - Face capture for AI recognition
 - Department and subject assignment
@@ -75,6 +82,7 @@ This system is built for modern educational institutions that need an efficient,
 - Office location tracking
 
 ### Schedule Management
+
 - Class schedule creation and management
 - Conflict detection and resolution
 - Classroom allocation
@@ -82,6 +90,7 @@ This system is built for modern educational institutions that need an efficient,
 - Faculty assignment
 
 ### Attendance Reports
+
 - Comprehensive filtering options
 - Department-wise analysis
 - Individual faculty performance
@@ -91,24 +100,28 @@ This system is built for modern educational institutions that need an efficient,
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn package manager
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd Attendence-Monitoring-System
    ```
 
 2. **Install dependencies**
+
    ```bash
    cd frontend
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -143,18 +156,21 @@ Attendence-Monitoring-System/
 ## 🎨 UI/UX Features
 
 ### Modern Design
+
 - Clean and professional interface
 - Responsive design for all devices
 - Intuitive navigation
 - Consistent Material-UI theming
 
 ### Interactive Components
+
 - Real-time data visualization
 - Interactive charts and graphs
 - Hover effects and animations
 - Loading states and progress indicators
 
 ### User Experience
+
 - Step-by-step registration process
 - Clear error messages and validation
 - Success notifications
@@ -165,16 +181,19 @@ Attendence-Monitoring-System/
 The system includes comprehensive mock data for demonstration:
 
 ### Faculty Members
+
 - 8 faculty members across different departments
 - Realistic contact information and office locations
 - Individual attendance rates and performance metrics
 
 ### Schedules
+
 - 8 active class schedules
 - Various time slots and classroom assignments
 - Department-specific subjects
 
 ### Attendance Records
+
 - 30 days of historical attendance data
 - Realistic attendance patterns
 - Multiple attendance methods (face recognition, manual)
@@ -182,9 +201,11 @@ The system includes comprehensive mock data for demonstration:
 ## 🔧 Configuration
 
 ### Environment Setup
+
 The system uses mock data by default, making it easy to run without backend dependencies.
 
 ### Customization
+
 - Modify `src/utils/mockData.js` to add more faculty members
 - Update department and subject lists in components
 - Customize themes in `src/App.jsx`
@@ -192,6 +213,7 @@ The system uses mock data by default, making it easy to run without backend depe
 ## 📊 Analytics & Reporting
 
 ### Dashboard Analytics
+
 - Total faculty count
 - Active schedules
 - Today's attendance summary
@@ -199,12 +221,14 @@ The system uses mock data by default, making it easy to run without backend depe
 - System status monitoring
 
 ### Attendance Reports
+
 - Filter by faculty, date, subject, department
 - Export to CSV format
 - Department-wise analysis
 - Individual faculty performance tracking
 
 ### Schedule Analytics
+
 - Conflict detection
 - Classroom utilization
 - Time slot analysis
@@ -213,12 +237,14 @@ The system uses mock data by default, making it easy to run without backend depe
 ## 🛡️ Security Features
 
 ### Data Protection
+
 - Encrypted data storage (simulated)
 - Secure authentication system
 - Privacy-compliant data handling
 - Regular backup procedures
 
 ### Access Control
+
 - Role-based access control
 - Secure session management
 - Audit trail capabilities
@@ -227,17 +253,21 @@ The system uses mock data by default, making it easy to run without backend depe
 ## 🚀 Deployment
 
 ### Development
+
 ```bash
 npm run dev
 ```
 
 ### Production Build
+
 ```bash
 npm run build
 ```
 
 ### Static Hosting
+
 The built application can be deployed to any static hosting service:
+
 - Netlify
 - Vercel
 - GitHub Pages
@@ -248,6 +278,7 @@ The built application can be deployed to any static hosting service:
 This is a college project demonstrating modern web development practices and AI integration concepts.
 
 ### Development Guidelines
+
 - Follow React best practices
 - Use Material-UI components consistently
 - Maintain responsive design
@@ -260,12 +291,14 @@ This project is developed for educational purposes as a college project.
 ## 🎓 College Project Features
 
 ### Academic Focus
+
 - Designed specifically for college faculty management
 - Demonstrates modern web development skills
 - Showcases AI integration concepts
 - Professional-grade UI/UX design
 
 ### Technical Skills Demonstrated
+
 - React.js development
 - Material-UI implementation
 - State management
@@ -275,6 +308,7 @@ This project is developed for educational purposes as a college project.
 - Mock data management
 
 ### Learning Outcomes
+
 - Full-stack development concepts
 - Modern UI/UX design principles
 - Data management and analytics
@@ -287,4 +321,4 @@ For questions or support regarding this college project, please refer to the pro
 
 ---
 
-**Note**: This system uses mock data for demonstration purposes. In a production environment, it would be connected to a real backend API and database system. 
+**Note**: This system uses mock data for demonstration purposes. In a production environment, it would be connected to a real backend API and database system.
